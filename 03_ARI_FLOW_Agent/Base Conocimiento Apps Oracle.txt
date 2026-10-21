@@ -1,0 +1,44 @@
+﻿Oracle Fusion Cloud Sales
+Manual Técnico-Funcional y Referencia de la Suite de Automatización de Ventas (Redwood Platform)
+El Oracle Fusion Cloud Sales (anteriormente conocido como Oracle Sales Cloud) es una solución empresarial de CRM (Customer Relationship Management) y SFA (Sales Force Automation) de última generación. Desarrollada de forma nativa bajo la arquitectura en la nube de Oracle y utilizando la nueva interfaz responsiva Redwood, la suite fue diseñada para optimizar los procesos de ingresos, unificar datos de cuentas de clientes y proporcionar recomendaciones comerciales basadas en inteligencia artificial.
+________________
+
+
+1. Arquitectura de Datos y Enfoque "Data-First"
+La principal base de Oracle Cloud Sales es su integración nativa con el Oracle Unity Customer Data Platform (CDP) y el Customer Data Management (CDM). En lugar de mantener silos de registros, la plataforma unifica interacciones del cliente provenientes de marketing, ventas, soporte técnico y canales de e-commerce con los sistemas de back-office (como ERP/Finanzas).
+Beneficios Estructurales:
+* Perfil Único de Cliente (Single Customer View): Limpieza, deduplicación y enriquecimiento continuo de cuentas y contactos corporativos en tiempo real.
+* Estructura de Territorios Dinámica: Cuentas, leads y oportunidades comerciales son evaluados y distribuidos automáticamente a equipos o representantes específicos de acuerdo con reglas geográficas, verticales de industria o facturación.
+________________
+
+
+2. Módulos Core y Jornada Comercial
+La suite cubre todas las etapas esenciales del ciclo comercial, operando de extremo a extremo desde la captación del contacto hasta la generación de ingresos.
+2.1. Lead and Campaign Management (Gestión de Leads)
+* Campañas de Ventas: Herramientas integradas que permiten a los representantes crear y dar seguimiento a sus propias campañas orientadas a generar tracción en su base de clientes.
+* Calificación Automática: Puntuación de leads por IA (Lead Scoring), midiendo la intención de compra y priorizando los contactos con mayor probabilidad de conversión.
+2.2. Opportunity & Sales Automation (Gestión de Oportunidades)
+* Embudo de Ventas Inteligente: Seguimiento del ciclo completo de negociaciones comerciales, con actualizaciones sencillas de etapas, fechas estimadas de cierre y pronóstico de ingresos (Sales Forecasting).
+* Guías de Ventas (Sales Playbooks): Pasos y tareas recomendados directamente en la pantalla del vendedor, basados en las mejores prácticas de la organización para ese segmento específico.
+2.3. Account and Contact Management
+* Integración B2B Nativa: Mapeo complejo de estructuras corporativas tipo holding, con múltiples subsidiarias y roles de tomadores de decisión definidos dentro de cada cuenta.
+* LinkedIn Sales Navigator Integration: Conector embebido que permite a los representantes visualizar perfiles y enviar InMails de LinkedIn directamente desde la interfaz de Oracle Sales.
+2.4. Sales Performance Management (SPM)
+* Territory & Quota Management: Definición analítica de metas comerciales estructuradas por trimestre o año.
+* Incentive Compensation: Motor altamente sofisticado para el cálculo automatizado de comisiones de ventas, bonificaciones de equipo y gestión de disputas de pagos.
+________________
+
+
+3. Recursos de Inteligencia Artificial (Fusion AI)
+La inteligencia artificial se inyecta en flujos de trabajo nativos para eliminar el trabajo manual de los vendedores:
+* Siguiente Mejor Acción (Next Best Action): El sistema analiza datos conductuales del cliente y sugiere cuál debe ser el próximo paso del vendedor (ej: "Enviar propuesta de renovación" o "Agendar reunión técnica").
+* IA Generativa para Vendedores: Creación asistida de resúmenes de cuentas comerciales, borradores automatizados de correos electrónicos de seguimiento de propuestas y análisis rápidos sobre el historial de interacciones recientes del cliente.
+* Pronóstico Predictivo (Predictive Forecasting): Algoritmos que comparan el embudo actual con datos históricos de cierre para alertar a directores sobre probables desviaciones respecto a la meta antes del cierre del mes.
+________________
+
+
+4. Conectividad, Extensibilidad y Low-Code
+Oracle Fusion Cloud Sales es altamente flexible, permitiendo extensiones de pantalla e integraciones sin impactar las actualizaciones automáticas:
+* Oracle Visual Builder Studio: Plataforma low-code integrada donde administradores de negocio pueden agregar campos personalizados, crear nuevas pestañas y modificar flujos de validación de pantalla nativos de la interfaz Redwood.
+* Oracle Sales Cloud Adapter: Mecanismo integrado a la arquitectura SOA/OIC que abstrae la complejidad técnica y expone objetos de negocio (Facturas, Leads, Oportunidades) y disparadores de eventos (Event Subscriptions) mediante un asistente gráfico punto a punto.
+* APIs REST Robustas: Documentación integral que facilita la lectura y escritura asíncrona de registros para conectar el CRM a centrales telefónicas corporativas (CTI) o herramientas externas de firma electrónica.
