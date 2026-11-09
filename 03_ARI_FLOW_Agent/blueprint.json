@@ -71,7 +71,7 @@
                                 "scoped": "true",
                                 "connection": "google-email"
                             },
-                            "label": "Carolina's Gmail connection (bailontrujillocarolina@gmail.com)"
+                            "label": "Gmail connection"
                         }
                     }
                 },
@@ -1826,7 +1826,7 @@
                                                 "scoped": "true",
                                                 "connection": "google-email"
                                             },
-                                            "label": "Carolina's Gmail connection (bailontrujillocarolina@gmail.com)"
+                                            "label": "Gmail connection"
                                         }
                                     }
                                 },
@@ -2174,7 +2174,7 @@
                                                 "scoped": "true",
                                                 "connection": "google-email"
                                             },
-                                            "label": "Carolina's Gmail connection (bailontrujillocarolina@gmail.com)"
+                                            "label": "Gmail connection"
                                         }
                                     }
                                 },
@@ -2447,7 +2447,7 @@
                                                 "scoped": "true",
                                                 "connection": "google-email"
                                             },
-                                            "label": "Carolina's Gmail connection (bailontrujillocarolina@gmail.com)"
+                                            "label": "Gmail connection"
                                         }
                                     }
                                 },

@@ -1,41 +1,37 @@
-# 🤖 Ecosistema BPA: Agentes Autónomos con IA Generativa
+# Agentes de IA para procesos de negocio
 
-![Google Opal](https://img.shields.io/badge/Google%20Opal-Low--Code-blue)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-API-orange)
-![Make](https://img.shields.io/badge/Make-Integromat-blueviolet)
-![ChatGPT](https://img.shields.io/badge/ChatGPT-Custom%20Instructions-green)
+Tres agentes construidos para **ARI Consulting**, una consultora ficticia de Oracle, durante la *Inmersión: Agentes de IA para Negocios* de Oracle Next Education (Oracle + Alura Latam, 2026). Cada uno ataca una tarea repetitiva distinta: responder consultas de soporte, armar propuestas comerciales y monitorear noticias del mercado.
 
-Código fuente y arquitectura de un **Ecosistema Multi-Agente** diseñado para la Automatización de Procesos de Negocio (BPA). 
+`Make` · `Google Gemini API` · `RAG` · `ChatGPT (Custom Instructions)` · `Google Opal` · `Prompt engineering`
 
-Este proyecto resuelve cuellos de botella operativos mediante la orquestación de Modelos de Lenguaje (LLMs), arquitecturas RAG (Retrieval-Augmented Generation) y pipelines de automatización, conectando la ejecución técnica con la eficiencia corporativa.
+![ARI Flow: triage de soporte con IA](img/ari_flow.png)
 
-## 🏗️ Arquitectura del Ecosistema
+## Los tres agentes
 
-### 📁 [01_ARI_NEWS_App](./01_ARI_NEWS_App) — Panel de Inteligencia de Negocios (BI)
-Pipeline orquestado en **Google Opal** estructurado en 4 nodos especializados:
-1. **Buscador (Web Grounding):** Extracción de noticias en tiempo real con filtrado temporal estricto.
-2. **Control de Calidad (QC):** Sanitización de URLs rotas mediante la conversión de títulos en slugs de búsqueda seguros.
-3. **Generador Visual:** Creación de assets corporativos abstractos mediante modelos de imagen (formato 16:9).
-4. **Web Creator:** Renderizado del output en un panel HTML autónomo con CSS responsivo embebido (estricto cumplimiento CSP).
+| Agente | Qué resuelve | Cómo | Evidencia |
+|---|---|---|---|
+| [**ARI FLOW**](03_ARI_FLOW_Agent) · soporte | Clasifica los correos entrantes: responde solo las consultas técnicas y deriva el resto a una persona | Make + Gemini: un clasificador, un enrutador y una respuesta con RAG sobre una base de conocimiento | [Escenario en Make](https://us2.make.com/public/shared-scenario/Na1q5dCZWHq/ari-flow-inmersion), [blueprint](03_ARI_FLOW_Agent/blueprint.json) y [kit de evaluación](03_ARI_FLOW_Agent/evaluacion) |
+| [**ARI DEAL**](02_ARI_DEAL_Agent) · comercial | Genera propuestas comerciales en Word a partir de un briefing, validando presupuesto y plazos | ChatGPT con instrucciones personalizadas, plantilla y catálogo como base de conocimiento; empaquetado como *skill* | [2 videos de prueba](02_ARI_DEAL_Agent) y 2 propuestas generadas |
+| [**ARI NEWS**](01_ARI_NEWS_App) · inteligencia de mercado | Arma un panel con las 3 noticias más relevantes de un sector, región y fecha | Google Opal: 4 nodos (búsqueda, control de calidad de links, imagen y página HTML) | Prompts de cada iteración documentados |
 
-### 📁 [02_ARI_DEAL_Agent](./02_ARI_DEAL_Agent) — Motor RAG Comercial
-Agente conversacional configurado vía **ChatGPT (Custom Instructions / Meta-prompting)** para la generación automatizada de propuestas comerciales en Word.
-* **Ingesta RAG:** Utiliza catálogos PDF y plantillas de la consultora para imponer reglas de negocio (inversión, plazos).
-* **Flujo A (Validador):** Ingesta un briefing crudo, mapea 10 campos clave, detecta información faltante y valida alertas de presupuesto antes de accionar.
-* **Flujo B (Entrevista):** Construye la propuesta desde cero mediante un formulario conversacional guiado por etapas.
+## Qué aprendí construyéndolos
 
-### 📁 [03_ARI_FLOW_Agent](./03_ARI_FLOW_Agent) — Pipeline de Soporte (Triage AI)
-Automatización en **Make (Integromat)** que integra Gmail, Google Drive y **Google Gemini 3.6 Flash**.
-* **Clasificador Semántico:** Un nodo IA evalúa los correos entrantes y activa un enrutador condicional.
-* **Ruta IA (Consultas Técnicas):** Descarga la base de conocimientos (`.txt` para optimizar latencia) y responde en HTML usando inyección RAG.
-* **Ruta Humana (Fallback):** Deriva consultas administrativas o fuera de dominio a la etiqueta "Help Desk Human", garantizando una política de *Zero-Hallucination*.
+- **Separar clasificar de responder.** En ARI FLOW, un primer modelo solo decide la ruta (SI/NO) y un segundo redacta la respuesta. Así la derivación a una persona no depende de que el modelo "se dé cuenta" mientras escribe.
+- **La primera versión casi nunca alcanza.** En ARI NEWS, un único prompt devolvía links rotos; la solución fue dividir el trabajo en nodos especializados, uno de ellos dedicado solo a validar URLs.
+- **Un agente se evalúa con casos de prueba, no con una demo.** Por eso ARI FLOW tiene un set de 30 correos etiquetados y un script que mide a qué carpeta fue cada uno.
 
-## 🛠️ Stack Tecnológico
-* **Plataformas & IA:** Google Opal, API Google Gemini (Flash), ChatGPT Plus.
-* **Ingeniería & Orquestación:** Make (Integromat), RAG, Prompt Engineering Avanzado (Meta-prompting, Web Grounding).
-* **Frontend:** HTML5, CSS3 puro (código autónomo).
+## Evaluación de ARI FLOW
 
-## 🎯 Impacto Operativo (Product Sense)
-1. **Inteligencia Competitiva:** ARI NEWS provee monitoreo de mercado validado y listo para consumir.
-2. **Estandarización Comercial:** ARI DEAL elimina tiempos manuales de redacción y previene errores humanos en facturación gracias a la validación de reglas de negocio.
-3. **Reducción de SLA:** ARI FLOW automatiza el soporte de nivel 1, liberando al equipo humano mediante un triage inteligente y seguro.
+El [kit de evaluación](03_ARI_FLOW_Agent/evaluacion) tiene 30 correos en cuatro grupos: consultas que la base de conocimiento cubre, consultas de Oracle que **no** cubre, consultas administrativas y casos ambiguos. El script `evaluar.py` calcula la exactitud del enrutamiento, la calidad de las respuestas automáticas y lista los correos que el agente respondió cuando debía derivarlos.
+
+**Un riesgo que el set está diseñado para medir:** el clasificador responde SI ante cualquier consulta de Oracle Cloud (HCM, ERP, SCM…), pero la base de conocimiento solo cubre **Oracle Sales**. Una consulta sobre sueldos en Oracle HCM iría a la ruta automática sin información para contestarla.
+
+## Limitaciones
+
+- Son prototipos sobre una empresa ficticia, no sistemas en producción.
+- ARI FLOW clasifica con el *snippet* del correo (las primeras líneas), no con el cuerpo completo.
+- ARI DEAL y ARI NEWS dependen de plataformas cerradas (ChatGPT y Google Opal): se documentan con prompts, videos y resultados, no con código ejecutable.
+
+---
+
+**Carolina Bailon Trujillo** · Estudiante de Ciencia de Datos en Organizaciones (UNLP) · [LinkedIn](https://www.linkedin.com/in/carolinabailontrujillo/) · [GitHub](https://github.com/CaroBailon)

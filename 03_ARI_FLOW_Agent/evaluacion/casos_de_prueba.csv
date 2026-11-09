@@ -1,0 +1,31 @@
+id,grupo,asunto,cuerpo,ruta_esperada,ruta_obtenida,respuesta_correcta,cita_fuente,notas
+1,oracle_cubierto,Lead scoring en Oracle Sales,"Hola, ¿Oracle Fusion Cloud Sales puede priorizar automáticamente los leads según su probabilidad de compra? Queremos dejar de hacerlo a mano.",IA,,,,
+2,oracle_cubierto,Integración con LinkedIn,"Buenos días. ¿Es posible ver perfiles de LinkedIn y mandar InMails sin salir de Oracle Sales?",IA,,,,
+3,oracle_cubierto,Cálculo de comisiones,"Necesitamos calcular comisiones y bonos del equipo comercial. ¿Oracle Cloud Sales tiene algo para eso o hay que usar otra herramienta?",IA,,,,
+4,oracle_cubierto,Pronóstico de ventas,"¿Oracle Sales puede avisarle al director si el trimestre viene por debajo de la meta antes de cerrar el mes?",IA,,,,
+5,oracle_cubierto,Campos personalizados en Redwood,"Queremos agregar campos propios y una pestaña nueva en la pantalla de oportunidades. ¿Se puede sin programar?",IA,,,,
+6,oracle_cubierto,Holdings y subsidiarias,"Nuestro cliente es un holding con 6 subsidiarias. ¿Oracle Sales permite modelar esa estructura y los decisores de cada una?",IA,,,,
+7,oracle_cubierto,Asignación de territorios,"¿Cómo asigna Oracle Cloud Sales las cuentas y oportunidades a cada vendedor? Trabajamos por región y por industria.",IA,,,,
+8,oracle_cubierto,API REST y central telefónica,"Queremos conectar el CRM de Oracle con nuestra central telefónica. ¿Tiene APIs REST para leer y escribir registros?",IA,,,,
+9,oracle_cubierto,IA generativa para vendedores,"¿La IA de Oracle Sales puede redactar borradores de mails de seguimiento y resumir el historial de un cliente?",IA,,,,
+10,oracle_cubierto,Duplicados de clientes,"Tenemos muchos contactos duplicados. ¿Oracle Sales los limpia y unifica en un solo perfil de cliente?",IA,,,,
+11,oracle_cubierto,Siguiente mejor acción,"Leí que Oracle Sales sugiere el próximo paso al vendedor. ¿Cómo funciona eso?",IA,,,,
+12,oracle_cubierto,Adaptador de integración,"¿Qué es el Oracle Sales Cloud Adapter y para qué sirve en una integración con OIC?",IA,,,,
+13,oracle_fuera_base,Liquidación de sueldos en HCM,"¿Oracle HCM Cloud permite liquidar sueldos con la normativa argentina?",HUMANO,,,,"La base solo cubre Oracle Sales: el clasificador dirá SI, pero no hay información para responder"
+14,oracle_fuera_base,Cierre contable en ERP,"¿Cuántos días lleva configurar el cierre contable mensual en Oracle ERP Financials?",HUMANO,,,,"Fuera de la base de conocimiento"
+15,oracle_fuera_base,Inventario en SCM,"¿Oracle SCM Cloud maneja inventario en varios depósitos con trazabilidad por lote?",HUMANO,,,,"Fuera de la base de conocimiento"
+16,oracle_fuera_base,Evaluaciones de desempeño,"Queremos hacer evaluaciones de desempeño 360 en Oracle HCM. ¿Viene incluido?",HUMANO,,,,"Fuera de la base de conocimiento"
+17,oracle_fuera_base,Conciliación bancaria,"¿Oracle Financials concilia automáticamente los extractos bancarios?",HUMANO,,,,"Fuera de la base de conocimiento"
+18,oracle_fuera_base,Compras y proveedores,"¿El módulo de compras de Oracle ERP permite aprobar órdenes según el monto?",HUMANO,,,,"Fuera de la base de conocimiento"
+19,general,Factura de octubre,"Hola, no me llegó la factura de octubre. ¿Me la pueden reenviar?",HUMANO,,,,
+20,general,Cambio de horario de reunión,"¿Podemos pasar la reunión del jueves al viernes a las 10?",HUMANO,,,,
+21,general,Presupuesto de consultoría,"Quisiera un presupuesto para una implementación. Somos una empresa de 200 empleados.",HUMANO,,,,
+22,general,Baja de servicio,"Queremos dar de baja el contrato de soporte a partir de diciembre.",HUMANO,,,,
+23,general,Búsqueda laboral,"Hola, les escribo para enviarles mi CV para la búsqueda de consultor junior.",HUMANO,,,,
+24,general,Acceso al portal,"No puedo entrar al portal de clientes, me dice contraseña incorrecta.",HUMANO,,,,
+25,general,Felicitaciones al equipo,"Solo quería agradecerles por la capacitación de ayer, estuvo excelente.",HUMANO,,,,
+26,general,Datos de facturación,"Cambiamos la razón social. ¿A quién le paso los datos nuevos para facturar?",HUMANO,,,,
+27,ambiguo,Licencias y precio de Oracle Sales,"¿Cuánto cuesta cada licencia de Oracle Sales y cómo se factura?",HUMANO,,,,"Es sobre Oracle pero es comercial: la base no tiene precios"
+28,ambiguo,CRM de otra marca,"¿Salesforce tiene lead scoring con IA como Oracle?",HUMANO,,,,"Compara con otro proveedor"
+29,ambiguo,Pregunta en inglés,"Does Oracle Fusion Cloud Sales support predictive forecasting?",IA,,,,"Mismo tema cubierto, en inglés"
+30,ambiguo,Consulta mixta,"Dos cosas: ¿Oracle Sales integra con LinkedIn? Y además necesito la factura de septiembre.",HUMANO,,,,"Mezcla técnica y administrativa"
